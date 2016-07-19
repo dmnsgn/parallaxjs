@@ -12,10 +12,10 @@ $ npm install --save parallaxjs
 ## Usage
 
 ```html
-<div class="WorkItem-picture layer" data-parallax-speed="0.6" >
+<div class="layer" data-parallax-speed="3" >
 	Parallax layer
 </div>
-<div class="WorkItem-picture layer" data-parallax-speed="0.2" >
+<div class="layer" data-parallax-speed="1.5" >
 	Other layer that moves faster
 </div>
 ```
