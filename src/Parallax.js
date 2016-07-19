@@ -2,7 +2,7 @@ import prefix from 'prefix-style';
 
 export default class Parallax {
   constructor(elements, options) {
-    this.layers = elements || document.querySelectorAll(elements);
+    this.layers = elements;
     this.options = Object.assign({
       speed: 1
     }, options);
