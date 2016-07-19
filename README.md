@@ -23,7 +23,7 @@ $ npm install --save parallaxjs
 ```js
 const Parallax = require('parallaxjs');
 
-const parallax = new Parallax('.layer');
+const parallax = new Parallax(document.querySelectorAll('.layer'));
 ```
 
 
