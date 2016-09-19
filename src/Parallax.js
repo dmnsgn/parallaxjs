@@ -12,10 +12,6 @@ export default class Parallax {
 
   init() {
     this.reset();
-
-    // Add listeners
-    window.addEventListener('scroll', this.transform.bind(this)); // TODO: Debounce, rAF
-    window.addEventListener('resize', this.onResize.bind(this));
   }
 
   reset() {
@@ -84,6 +80,10 @@ export default class Parallax {
 
       this.items[i].element.style[prefix('transform')] = `translate3d(0, ${~~progress}px, 0)`;
     }
+  }
+
+  onScroll() {
+    this.transform();
   }
 
   onResize() {
