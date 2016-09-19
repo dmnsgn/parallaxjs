@@ -24,6 +24,10 @@ $ npm install --save parallaxjs
 const Parallax = require('parallaxjs');
 
 const parallax = new Parallax(document.querySelectorAll('.layer'));
+
+// Add parallax handlers to your own listeners (so that you can debounced them or whatever)
+window.addEventListener('scroll', parallax.onScroll);
+window.addEventListener('resize', parallax.onResize);
 ```
 
 
