@@ -44,7 +44,57 @@ window.addEventListener("resize", () => parallax.onResize());
 
 <!-- api-start -->
 
-Auto-generated API content.
+<a name="module_Parallax"></a>
+
+## Parallax
+
+- [Parallax](#module_Parallax)
+  - [Parallax](#exp_module_Parallax--Parallax) ⏏
+    - [new Parallax(elements, options)](#new_module_Parallax--Parallax_new)
+    - [~Direction](#module_Parallax--Parallax..Direction) : <code>&quot;x&quot;</code> \| <code>&quot;y&quot;</code>
+    - [~Options](#module_Parallax--Parallax..Options) : <code>Object</code>
+
+<a name="exp_module_Parallax--Parallax"></a>
+
+### Parallax ⏏
+
+Simple Parallax on DOM elements.
+
+**Kind**: Exported class  
+<a name="new_module_Parallax--Parallax_new"></a>
+
+#### new Parallax(elements, options)
+
+Creates an instance of Parallax.
+
+| Param    | Type                                   | Description                 |
+| -------- | -------------------------------------- | --------------------------- |
+| elements | <code>Array.&lt;HTMLElement&gt;</code> | Elements to be transformed. |
+| options  | <code>Options</code>                   |                             |
+
+<a name="module_Parallax--Parallax..Direction"></a>
+
+#### Parallax~Direction : <code>&quot;x&quot;</code> \| <code>&quot;y&quot;</code>
+
+Parallax direction (x or y).
+
+**Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)  
+<a name="module_Parallax--Parallax..Options"></a>
+
+#### Parallax~Options : <code>Object</code>
+
+**Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)  
+**Properties**
+
+| Name           | Type                   | Default                    | Description                                                 |
+| -------------- | ---------------------- | -------------------------- | ----------------------------------------------------------- |
+| [speed]        | <code>number</code>    | <code>1</code>             | Parallax relative speed.                                    |
+| [offset]       | <code>number</code>    | <code>0.5</code>           | Offset (0 to 1) relative to window height.                  |
+| [heightOffset] | <code>number</code>    | <code>0</code>             | Offset (0 to 1) relative to element height.                 |
+| [direction]    | <code>Direction</code> | <code>&quot;y&quot;</code> | Parallax direction.                                         |
+| [min]          | <code>number</code>    | <code>-Infinity</code>     | Minimum translation.                                        |
+| [max]          | <code>number</code>    | <code>Infinity</code>      | Maximum translation.                                        |
+| [background]   | <code>boolean</code>   | <code>false</code>         | Apply parallax to background position instead of transform. |
 
 <!-- api-end -->
 
