@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>parallaxjs by Damien Seguin (https://github.com/dmnsgn)</title>
+    <style>
+      :root {
+        --color-dark: #404040;
+        --color-light: #f2f2f2;
+        --color-accent: #fd5e62;
+      }
+
+      body {
+        margin: 0;
+        overscroll-behavior: none;
+        font-family: sans-serif;
+        color: var(--color-dark);
+        background-color: var(--color-light);
+      }
+
+      main {
+        padding: 0 20px;
+        overflow: hidden;
+      }
+      h1 {
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+      .u-container {
+        counter-reset: item;
+        padding: 25vh 0;
+      }
+      .Parallax {
+        position: relative;
+        width: 80%;
+        height: 50vh;
+        padding: 10vh;
+        margin: 0 auto 10vh;
+        background-color: #ddd;
+        box-sizing: border-box;
+      }
+      .Parallax::before {
+        position: absolute;
+        top: 10px;
+        left: -14px;
+        counter-increment: item;
+        content: counter(item);
+        font-size: 50px;
+        font-family: monospace;
+      }
+      .Parallax::after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        background-color: var(--color-accent);
+      }
+      .Parallax-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(50% - 100px);
+        height: calc(100% - 100px);
+        padding: 50px;
+      }
+      .Parallax-image {
+        position: absolute;
+        top: 20px;
+        right: -20px;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .Parallax-tags {
+        font-weight: bold;
+      }
+      .Parallax-url {
+        position: absolute;
+        top: 10vh;
+        right: -30px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--color-light);
+        background-color: var(--color-dark);
+      }
+      a {
+        color: var(--color-light);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>parallaxjs</h1>
+      <div class="u-container">
+        <article class="Parallax">
+          <div class="Parallax-detail">
+            <h2
+              class="Parallax-title layer"
+              data-parallax-speed="6"
+              data-parallax-height-offset="0.5"
+            >
+              Parallax layer 1
+            </h2>
+            <h3
+              class="Parallax-subtitle layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Subtitle 1
+            </h3>
+            <p
+              class="Parallax-description layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
+              dignissimos, esse perferendis minima sed non quae nesciunt impedit
+              nostrum ducimus praesentium qui laudantium est atque, tempora,
+              aliquid neque odit porro.
+            </p>
+            <p
+              class="Parallax-tags layer"
+              data-parallax-speed="5"
+              data-parallax-height-offset="0.5"
+            >
+              Wow / Such smooth / So slick / Very no fancy features 1
+            </p>
+          </div>
+          <img
+            class="Parallax-image layer"
+            data-parallax-speed="6"
+            data-parallax-height-offset="0.5"
+            src="https://source.unsplash.com/collection/155977/0"
+          />
+          <div class="Parallax-url layer" data-parallax-speed="6">
+            <a href="http://www.google.com" target="_blank">Open link</a>
+          </div>
+        </article>
+
+        <article class="Parallax">
+          <div class="Parallax-detail">
+            <h2
+              class="Parallax-title layer"
+              data-parallax-speed="6"
+              data-parallax-height-offset="0.5"
+            >
+              Parallax layer 2
+            </h2>
+            <h3
+              class="Parallax-subtitle layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Subtitle 2
+            </h3>
+            <p
+              class="Parallax-description layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              odit vero praesentium, aliquid, quas suscipit iste saepe hic
+              facilis quibusdam! Maiores obcaecati itaque blanditiis vero.
+              Asperiores ullam earum, minus quam!
+            </p>
+            <p
+              class="Parallax-tags layer"
+              data-parallax-speed="5"
+              data-parallax-height-offset="0.5"
+            >
+              Wow / Such smooth / So slick / Very no fancy features 2
+            </p>
+          </div>
+          <img
+            class="Parallax-image layer"
+            data-parallax-speed="6"
+            data-parallax-height-offset="0.5"
+            data-parallax-direction="x"
+            data-parallax-min="0"
+            src="https://source.unsplash.com/collection/155977/1"
+          />
+          <div class="Parallax-url layer" data-parallax-speed="6">
+            <a href="http://www.google.com" target="_blank">Open link</a>
+          </div>
+        </article>
+
+        <article class="Parallax">
+          <div class="Parallax-detail">
+            <h2
+              class="Parallax-title layer"
+              data-parallax-speed="6"
+              data-parallax-height-offset="0.5"
+            >
+              Parallax layer 3
+            </h2>
+            <h3
+              class="Parallax-subtitle layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Subtitle 3
+            </h3>
+            <p
+              class="Parallax-description layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
+              explicabo reiciendis pariatur, nam! Optio rem necessitatibus
+              illum! Ratione molestias, cumque ullam dignissimos quas eius,
+              possimus quos, vel doloremque nobis exercitationem.
+            </p>
+            <p
+              class="Parallax-tags layer"
+              data-parallax-speed="5"
+              data-parallax-height-offset="0.5"
+            >
+              Wow / Such smooth / So slick / Very no fancy features 3
+            </p>
+          </div>
+          <img
+            class="Parallax-image layer"
+            data-parallax-speed="6"
+            data-parallax-height-offset="0.5"
+            src="https://source.unsplash.com/collection/155977/2"
+          />
+          <div class="Parallax-url layer" data-parallax-speed="6">
+            <a href="http://www.google.com" target="_blank">Open link</a>
+          </div>
+        </article>
+
+        <article class="Parallax">
+          <div class="Parallax-detail">
+            <h2
+              class="Parallax-title layer"
+              data-parallax-speed="6"
+              data-parallax-height-offset="0.5"
+            >
+              Parallax layer 4
+            </h2>
+            <h3
+              class="Parallax-subtitle layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Subtitle 4
+            </h3>
+            <p
+              class="Parallax-description layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              aut ipsam consequuntur, modi in alias dolor. Pariatur, perferendis
+              aliquid ipsa libero nihil voluptate itaque enim debitis suscipit
+              nesciunt. Necessitatibus, tempora.
+            </p>
+            <p
+              class="Parallax-tags layer"
+              data-parallax-speed="5"
+              data-parallax-height-offset="0.5"
+            >
+              Wow / Such smooth / So slick / Very no fancy features 4
+            </p>
+          </div>
+          <img
+            class="Parallax-image layer"
+            data-parallax-speed="6"
+            data-parallax-height-offset="0.5"
+            data-parallax-direction="x"
+            data-parallax-max="0"
+            src="https://source.unsplash.com/collection/155977/1"
+          />
+          <div class="Parallax-url layer" data-parallax-speed="6">
+            <a href="http://www.google.com" target="_blank">Open link</a>
+          </div>
+        </article>
+
+        <article class="Parallax">
+          <div class="Parallax-detail">
+            <h2
+              class="Parallax-title layer"
+              data-parallax-speed="6"
+              data-parallax-height-offset="0.5"
+            >
+              Parallax layer 5
+            </h2>
+            <h3
+              class="Parallax-subtitle layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Subtitle 5
+            </h3>
+            <p
+              class="Parallax-description layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
+              explicabo reiciendis pariatur, nam! Optio rem necessitatibus
+              illum! Ratione molestias, cumque ullam dignissimos quas eius,
+              possimus quos, vel doloremque nobis exercitationem.
+            </p>
+            <p
+              class="Parallax-tags layer"
+              data-parallax-speed="5"
+              data-parallax-height-offset="0.5"
+            >
+              Wow / Such smooth / So slick / Very no fancy features 5
+            </p>
+          </div>
+          <div
+            class="Parallax-image layer"
+            data-parallax-speed="6"
+            data-parallax-height-offset="0.5"
+            data-parallax-background="true"
+            style="background-image: url(https://source.unsplash.com/collection/155977/5);"
+          ></div>
+          <div class="Parallax-url layer" data-parallax-speed="6">
+            <a href="http://www.google.com" target="_blank">Open link</a>
+          </div>
+        </article>
+
+        <article class="Parallax">
+          <div class="Parallax-detail">
+            <h2
+              class="Parallax-title layer"
+              data-parallax-speed="6"
+              data-parallax-height-offset="0.5"
+            >
+              Parallax layer 6
+            </h2>
+            <h3
+              class="Parallax-subtitle layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Subtitle 6
+            </h3>
+            <p
+              class="Parallax-description layer"
+              data-parallax-speed="3"
+              data-parallax-height-offset="0.5"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              aut ipsam consequuntur, modi in alias dolor. Pariatur, perferendis
+              aliquid ipsa libero nihil voluptate itaque enim debitis suscipit
+              nesciunt. Necessitatibus, tempora.
+            </p>
+            <p
+              class="Parallax-tags layer"
+              data-parallax-speed="5"
+              data-parallax-height-offset="0.5"
+            >
+              Wow / Such smooth / So slick / Very no fancy features 6
+            </p>
+          </div>
+          <div
+            class="Parallax-image layer"
+            data-parallax-speed="6"
+            data-parallax-height-offset="0.5"
+            data-parallax-background="true"
+            data-parallax-direction="x"
+            style="background-image: url(https://source.unsplash.com/collection/155977/5);"
+          ></div>
+          <div class="Parallax-url layer" data-parallax-speed="6">
+            <a href="http://www.google.com" target="_blank">Open link</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script async src="web_modules/es-module-shims.js"></script>
+    <script src="web_modules/import-map.json" type="importmap"></script>
+
+    <script type="module">
+      import Parallax from "./index.js";
+
+      const parallax = new Parallax(document.querySelectorAll(".layer"));
+      parallax.init();
+
+      window.addEventListener("scroll", () => parallax.onScroll());
+      window.addEventListener("resize", () => parallax.onResize());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "clamp": "./clamp.js",
+    "es-module-shims": "./es-module-shims.js",
+    "prefix-style": "./prefix-style.js"
+  }
+}
