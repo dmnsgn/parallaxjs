@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0](https://github.com/dmnsgn/parallaxjs/compare/v2.0.1...v2.1.0) (2021-09-10)
+
+
+### Features
+
+* add exports field to package.json ([fab515a](https://github.com/dmnsgn/parallaxjs/commit/fab515a217705a2c28228c52d371b9d3fed1e467))
+
+
+
 ## [2.0.1](https://github.com/dmnsgn/parallaxjs/compare/v2.0.0...v2.0.1) (2021-04-09)
 
 

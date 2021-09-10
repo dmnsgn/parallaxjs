@@ -67,10 +67,10 @@ Simple Parallax on DOM elements.
 
 Creates an instance of Parallax.
 
-| Param    | Type                                   | Description                 |
-| -------- | -------------------------------------- | --------------------------- |
-| elements | <code>Array.&lt;HTMLElement&gt;</code> | Elements to be transformed. |
-| options  | <code>Options</code>                   |                             |
+| Param    | Type                                                        | Description                 |
+| -------- | ----------------------------------------------------------- | --------------------------- |
+| elements | <code>Array.&lt;HTMLElement&gt;</code>                      | Elements to be transformed. |
+| options  | [<code>Options</code>](#module_Parallax--Parallax..Options) |                             |
 
 <a name="module_Parallax--Parallax..Direction"></a>
 
@@ -86,15 +86,15 @@ Parallax direction (x or y).
 **Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)  
 **Properties**
 
-| Name           | Type                   | Default                    | Description                                                 |
-| -------------- | ---------------------- | -------------------------- | ----------------------------------------------------------- |
-| [speed]        | <code>number</code>    | <code>1</code>             | Parallax relative speed.                                    |
-| [offset]       | <code>number</code>    | <code>0.5</code>           | Offset (0 to 1) relative to window height.                  |
-| [heightOffset] | <code>number</code>    | <code>0</code>             | Offset (0 to 1) relative to element height.                 |
-| [direction]    | <code>Direction</code> | <code>&quot;y&quot;</code> | Parallax direction.                                         |
-| [min]          | <code>number</code>    | <code>-Infinity</code>     | Minimum translation.                                        |
-| [max]          | <code>number</code>    | <code>Infinity</code>      | Maximum translation.                                        |
-| [background]   | <code>boolean</code>   | <code>false</code>         | Apply parallax to background position instead of transform. |
+| Name           | Type                                                            | Default                    | Description                                                 |
+| -------------- | --------------------------------------------------------------- | -------------------------- | ----------------------------------------------------------- |
+| [speed]        | <code>number</code>                                             | <code>1</code>             | Parallax relative speed.                                    |
+| [offset]       | <code>number</code>                                             | <code>0.5</code>           | Offset (0 to 1) relative to window height.                  |
+| [heightOffset] | <code>number</code>                                             | <code>0</code>             | Offset (0 to 1) relative to element height.                 |
+| [direction]    | [<code>Direction</code>](#module_Parallax--Parallax..Direction) | <code>&quot;y&quot;</code> | Parallax direction.                                         |
+| [min]          | <code>number</code>                                             | <code>-Infinity</code>     | Minimum translation.                                        |
+| [max]          | <code>number</code>                                             | <code>Infinity</code>      | Maximum translation.                                        |
+| [background]   | <code>boolean</code>                                            | <code>false</code>         | Apply parallax to background position instead of transform. |
 
 <!-- api-end -->
 
