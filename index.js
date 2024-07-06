@@ -10,7 +10,7 @@ import clamp from "clamp";
  */
 
 /**
- * @typedef {Object} Options
+ * @typedef {object} Options
  * @property {number} [speed=1] Parallax relative speed.
  * @property {number} [offset=0.5] Offset (0 to 1) relative to window height.
  * @property {number} [heightOffset=0] Offset (0 to 1) relative to element height.
@@ -43,7 +43,7 @@ class Parallax {
         max: Infinity,
         background: false,
       },
-      options
+      options,
     );
   }
 
@@ -129,19 +129,18 @@ class Parallax {
           (this.items[i].speed * this.viewportHeight)) *
           this.viewportHeight,
         this.items[i].min,
-        this.items[i].max
+        this.items[i].max,
       );
       const translation = ["0", "0"];
       translation[this.items[i].direction === "x" ? 0 : 1] = `${~~progress}px`;
 
       if (this.items[i].background) {
         this.items[i].element.style.backgroundPosition = `${translation.join(
-          " "
+          " ",
         )}`;
       } else {
-        this.items[i].element.style[
-          prefix("transform")
-        ] = `translate3d(${translation.join(", ")} , 0)`;
+        this.items[i].element.style[prefix("transform")] =
+          `translate3d(${translation.join(", ")} , 0)`;
       }
     }
   }
