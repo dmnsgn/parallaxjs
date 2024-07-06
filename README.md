@@ -52,7 +52,7 @@ window.addEventListener("resize", () => parallax.onResize());
   - [Parallax](#exp_module_Parallax--Parallax) ⏏
     - [new Parallax(elements, options)](#new_module_Parallax--Parallax_new)
     - [~Direction](#module_Parallax--Parallax..Direction) : <code>&quot;x&quot;</code> \| <code>&quot;y&quot;</code>
-    - [~Options](#module_Parallax--Parallax..Options) : <code>Object</code>
+    - [~Options](#module_Parallax--Parallax..Options) : <code>object</code>
 
 <a name="exp_module_Parallax--Parallax"></a>
 
@@ -60,7 +60,7 @@ window.addEventListener("resize", () => parallax.onResize());
 
 Simple Parallax on DOM elements.
 
-**Kind**: Exported class  
+**Kind**: Exported class
 <a name="new_module_Parallax--Parallax_new"></a>
 
 #### new Parallax(elements, options)
@@ -78,12 +78,12 @@ Creates an instance of Parallax.
 
 Parallax direction (x or y).
 
-**Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)  
+**Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)
 <a name="module_Parallax--Parallax..Options"></a>
 
-#### Parallax~Options : <code>Object</code>
+#### Parallax~Options : <code>object</code>
 
-**Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)  
+**Kind**: inner typedef of [<code>Parallax</code>](#exp_module_Parallax--Parallax)
 **Properties**
 
 | Name           | Type                                                            | Default                    | Description                                                 |

@@ -1,6 +1,6 @@
 {
   "name": "parallaxjs",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Simple Parallax on DOM elements.",
   "keywords": [
     "parallax",
@@ -10,7 +10,10 @@
   ],
   "homepage": "https://github.com/dmnsgn/parallaxjs",
   "bugs": "https://github.com/dmnsgn/parallaxjs/issues",
-  "repository": "dmnsgn/parallaxjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmnsgn/parallaxjs.git"
+  },
   "funding": [
     {
       "type": "individual",
